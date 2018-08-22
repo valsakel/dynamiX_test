@@ -116,6 +116,7 @@ label:nth-child(2) {
 
 .main-text-wrapper h1 {
     text-transform: uppercase;
+    color: #ff6620;
 }
 
 .main-text-wrapper h2 {
@@ -192,30 +193,30 @@ select, option {
     -moz-appearance: none; /* Gecko */
 }
 
-/*.foo {*/
-    /*position: relative;*/
-/*}*/
-/**/
-/*.foo::after {*/
-    /*content: '\203A';*/
-    /*margin-right: 20px;*/
-    /*font: 17px "Consolas", monospace;*/
-    /*color: #000000;*/
-    /*-webkit-transform: rotate(90deg);*/
-    /*-moz-transform: rotate(90deg);*/
-    /*-ms-transform: rotate(90deg);*/
-    /*transform: rotate(90deg);*/
-    /*right: 0;*/
+.custom-caret {
+    position: relative;
+}
+
+.custom-caret::after {
+    content: '\203A';
+    margin-right: 20px;
+    font: 17px "Consolas", monospace;
+    color: #000000;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 0;
     /*Adjust for position however you want*/
 
-    /*top: 0;*/
+    top: 0;
     /*padding: 0 0 2px;*/
     /*border-bottom: 1px solid #999;*/
     /*left line */
 
-    /*position: absolute;*/
+    position: absolute;
     /*pointer-events: none;*/
-/*}*/
+}
 
 .form-group {
     margin-top: 20px;
