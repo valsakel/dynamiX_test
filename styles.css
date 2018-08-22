@@ -1,32 +1,52 @@
 * {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 1px;
+    box-sizing: border-box;
+}
 
+body {
+    position: relative;
+}
+
+.body-background {
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    bottom: 8vh;
+    right: 0;
+    background-image: url('images/bg-lines.png');
+    background-repeat: no-repeat;
 }
 
 h1, h2, p {
     margin: 0;
-
 }
+
+
 
 figure {
    margin: 0;
-    background-image: url('images/icon-plus.png');
-
 }
 
 figcaption {
+    display: inline-block;
     background-color: #fff;
-    width: 50%;
     padding: 1% 2.5% 2.5% 0;
     font-size: calc(.5rem + .5vw);
+}
 
+form {
+    min-width: 300px;
+    max-width: 450px;
 }
 
 fieldset, legend {
     margin: 0;
     padding: 0;
     border: none;
+}
+
+legend {
     color: transparent;
     line-height: 0;
 }
@@ -36,59 +56,62 @@ input, select, textarea {
     padding: 0;
     margin: 0;
     color: #000000;
-
     border: none;
     border-bottom: 1px solid #000000;
 }
 
+label:nth-child(2) {
+    margin-top: 20px;
+}
+
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #000000;
 }
+
 ::-moz-placeholder { /* Firefox 19+ */
     color: #000000;
-
 }
+
 :-ms-input-placeholder { /* IE 10+ */
     color: #000000;
-
 }
+
 :-moz-placeholder { /* Firefox 18- */
     color: #000000;
-
 }
 
 .main-content-wrapper,
 .prefooter {
     display: flex;
     flex-wrap: wrap;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 2% 2% 10%;
 }
 
-.main-content-wrapper {
-    margin-bottom: 10%;
+.main-text-wrapper,
+.prefooter-text-wrapper {
+    padding-top: 5%;
 }
 
 .main-img-wrapper {
+    position: relative;
     justify-content: flex-start;
 }
 
-.main-img-wrapper,
-.main-text-wrapper {
-    /*flex: 0 0 50%;*/
-    /*flex-basis: 50%;*/
-
+.main-img-background {
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    bottom: 0;
+    right: 0;
+    background-image: url('images/icon-plus.png');
 }
 
 .main-img-wrapper img {
-    width: 80%;
+    max-width: 80%;
     vertical-align: middle;
-}
-
-.main-text-wrapper div {
-    padding-top: 2.5%;
-    padding-left: 5%;
-
 }
 
 .main-text-wrapper h1 {
@@ -103,14 +126,12 @@ input, select, textarea {
 .main-text-wrapper p,
 .main-text-wrapper span {
     font-family: Lato, sans-serif;
-    letter-spacing: 0;
-    font-size: calc(.5rem + .5vw);
+    font-size: 14px;
 }
 
 .main-text-wrapper p {
     padding-top: 5%;
     padding-bottom: 5%;
-
 }
 
 .main-text-wrapper span {
@@ -122,7 +143,7 @@ input, select, textarea {
 .main-text-link {
     text-decoration: none;
     color: #ff6620;
-    font-size: calc(.5rem + .4vw);
+    font-size: 12px;
 }
 
 .main-text-link:hover,
@@ -130,30 +151,188 @@ input, select, textarea {
     text-decoration: underline;
 }
 
-.main-text-link::before {
-    /*content: "";*/
-    /*position: absolute;*/
-    /*display: block;*/
-    /*right: 1.75rem;*/
-    /*top: 50%;*/
-    /*font-family: 'FontAwesome';*/
-    /*font-size: 2.25em;*/
-    /*content: '\2192';*/
-    /*-webkit-transform: translate(0,-50%);*/
-    /*transform: translate(0,-50%);*/
-}
-
 .prefooter {
     display: flex;
 }
 
+.prefooter-text-wrapper h2 {
+    color: #ff6620;
+    font-weight: 200;
+}
+
+.prefooter-text-wrapper h2 span {
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+
+.prefooter-text-wrapper div {
+    padding-top: 5%;
+}
+
+.prefooter-text-wrapper p {
+    font-family: Lato, sans-serif;
+    font-size: 12px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*To remove button from IE11, thank you Matt */
+select::-ms-expand {
+    display: none;
+}
+
+select, option {
+    -webkit-appearance: none; /* WebKit/Chromium */
+    -moz-appearance: none; /* Gecko */
+}
+
+/*.foo {*/
+    /*position: relative;*/
+/*}*/
+/**/
+/*.foo::after {*/
+    /*content: '\203A';*/
+    /*margin-right: 20px;*/
+    /*font: 17px "Consolas", monospace;*/
+    /*color: #000000;*/
+    /*-webkit-transform: rotate(90deg);*/
+    /*-moz-transform: rotate(90deg);*/
+    /*-ms-transform: rotate(90deg);*/
+    /*transform: rotate(90deg);*/
+    /*right: 0;*/
+    /*Adjust for position however you want*/
+
+    /*top: 0;*/
+    /*padding: 0 0 2px;*/
+    /*border-bottom: 1px solid #999;*/
+    /*left line */
+
+    /*position: absolute;*/
+    /*pointer-events: none;*/
+/*}*/
+
+.form-group {
+    margin-top: 20px;
+}
+
+.form-group:last-child {
+    flex-direction: row;
+}
+
+.form-group p {
+    align-self: flex-end;
+    padding-left: 2%;
+    font-size: 12px;
+}
+
+.form-btn {
+    width: 50px;
+    font-size: 18px;
+    padding: 8px 5px;
+    color: #ff6620;
+    border-radius: 0;
+    border: 1px solid #ff6620;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 0 100%;
+    background-color: transparent;
+    transition: background-size .3s, color .3s;
+}
+
+.company-details {
+    padding-top: 2%;
+}
+
+.footer {
+    background-color: #ff6620;
+    /*margin: 0 auto;*/
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: 8vh;
+    display: flex;
+    color: #ffffff;
+    padding: 2%;
+    justify-content: space-between;
+}
+
+.footer-wrapper * {
+    align-self: center;
+}
+
+.footer-wrapper p {
+    font-size: 12px;
+    width: 60%;
+}
+
+.footer-wrapper div {
+    display: flex;
+}
+
 @media screen and (min-width: 600px) {
+    .main-content-wrapper,
+    .prefooter {
+        padding: 0 2% 25px;
+        /*padding-bottom: 25px;*/
+    }
+
     .main-img-wrapper,
     .main-text-wrapper,
     .prefooter-form-wrapper,
     .prefooter-text-wrapper {
-        /*flex-basis: 50%;*/
         flex: 0 0 50%;
     }
 
+    .body-background {
+        /*width: 60%;*/
+        /*height: 50%;*/
+        background-image: url('images/bg-lines@2x.png');
+    }
+
+    .main-img-background {
+        background-image: url('images/icon-plus@2x.png');
+    }
+
+    .main-text-wrapper,
+    .prefooter-text-wrapper {
+        padding-left: 50px;
+    }
 }
+
+@media screen and (min-width: 960px) {
+    .form-group {
+        flex-direction: row;
+    }
+
+    .form-group label:nth-child(2) {
+        margin-left: 20px;
+        margin-top: 0;
+    }
+
+    label {
+        width: 50%;
+    }
+
+    .main-text-wrapper p,
+    .main-text-wrapper span {
+        /*font-size: 18px;*/
+    }
+}
+
