@@ -207,13 +207,7 @@ select, option {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     right: 0;
-    /*Adjust for position however you want*/
-
     top: 0;
-    /*padding: 0 0 2px;*/
-    /*border-bottom: 1px solid #999;*/
-    /*left line */
-
     position: absolute;
     /*pointer-events: none;*/
 }
@@ -304,8 +298,8 @@ select, option {
     .body-background {
         /*width: 60%;*/
         /*height: 50%;*/
-        background-image: url('images/bg-lines@2x.png');
-    }
+        /*background-image: url('images/bg-lines@2x.png');*/
+    }   
 
     .main-img-background {
         background-image: url('images/icon-plus@2x.png');
