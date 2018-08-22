@@ -299,7 +299,7 @@ select, option {
         /*width: 60%;*/
         /*height: 50%;*/
         /*background-image: url('images/bg-lines@2x.png');*/
-    }   
+    }
 
     .main-img-background {
         background-image: url('images/icon-plus@2x.png');
@@ -308,6 +308,10 @@ select, option {
     .main-text-wrapper,
     .prefooter-text-wrapper {
         padding-left: 50px;
+    }
+
+    .prefooter-text-wrapper {
+        padding-top: 0;
     }
 }
 
