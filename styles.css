@@ -1,0 +1,27 @@
+figure {
+   margin: 0;
+    background-image: url('images/icon-plus.png');
+
+}
+
+figcaption {
+    background-color: #fff;
+    width: 50%;
+    padding: 1% 2.5% 2.5% 0;
+}
+
+.main-img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.main-img-wrapper,
+.main-text-wrapper {
+    /*flex: 0 0 50%;*/
+}
+
+.main-img-wrapper img {
+    width: 80%;
+    vertical-align: middle;
+}
