@@ -11,7 +11,7 @@
     <!--<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="favicon.ico">
@@ -21,26 +21,26 @@
 <div class="body-background"></div>
 <main class="main-content-wrapper" role="main">
     <section class="main-img-wrapper">
-        <div class="main-img-background"></div>
         <figure>
             <img src="images/content-image.jpg" alt="People sitting on a grass" nopin="nopin" />
             <figcaption>THIS IS A SPACE FOR IMAGE CAPTIONS</figcaption>
         </figure>
         <!--<img class="article-img" src="images/content-image.jpg" alt="People sitting on a grass" nopin="nopin"/>-->
         <!--<p></p>-->
+        <div class="main-img-background"></div>
 
 
 
     </section>
     <section class="main-text-wrapper">
         <div>
-            <h2>This is a sample</h2>
-            <h1>Title that has content</h1>
+            <h1 id="header">This is a sample<br><span>Title that has content</span></h1>
+            <!--<h1>Title that has content</h1>-->
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto cupiditate dolorum eveniet
                 exercitationem facilis fugiat illo maxime mollitia officiis quas qui repellendus, rerum saepe sequi
                 sint, suscipit voluptas voluptates?<span>Aperiam consequuntur</span> deserunt. Illo illum itaque
-                mollitia nostrum perspiciatis sequi, similique velit voluptates.
+                mollitia nostrum perspiciatis sequi, similique purus.
             </p>
             <a href="#" class="main-text-link">
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="form-group">
                     <button class="form-btn" type="submit">&#x2192;</button>
-                    <p>* indicates required fields</p>
+                    <p>* indicates required field</p>
                 </div>
             </fieldset>
         </form>
@@ -119,6 +119,9 @@
     </div>
 
 </footer>
+<div class="scroll-top">
+    <a href="#header" class="scroll-top-link">Go to top</a>
+</div>
 
 </body>
 </html>
