@@ -1,5 +1,5 @@
 * {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: 1px;
     box-sizing: border-box;
 }
@@ -22,6 +22,9 @@ h1, h2, p {
     margin: 0;
 }
 
+p {
+    font-family: 'Muli', sans-serif;
+}
 
 
 figure {
@@ -33,6 +36,7 @@ figcaption {
     background-color: #fff;
     padding: 1% 2.5% 2.5% 0;
     font-size: calc(.5rem + .5vw);
+    color: #989696;
 }
 
 form {
@@ -52,6 +56,7 @@ legend {
 }
 
 input, select, textarea {
+    font-family: 'Barlow', sans-serif;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -120,13 +125,14 @@ label:nth-child(2) {
 }
 
 .main-text-wrapper h2 {
-    font-weight: 200;
+    font-weight: 300;
     color: #7cd0f6;
 }
 
 .main-text-wrapper p,
 .main-text-wrapper span {
-    font-family: Lato, sans-serif;
+    font-family: 'Muli', sans-serif;
+    /*font-family: Lato, sans-serif;*/
     font-size: 14px;
 }
 
@@ -142,6 +148,7 @@ label:nth-child(2) {
 }
 
 .main-text-link {
+    font-weight: 600;
     text-decoration: none;
     color: #ff6620;
     font-size: 12px;
@@ -172,7 +179,7 @@ label:nth-child(2) {
 }
 
 .prefooter-text-wrapper p {
-    font-family: Lato, sans-serif;
+    font-family: 'Barlow', sans-serif;
     font-size: 12px;
 }
 
@@ -301,9 +308,9 @@ select, option {
         /*background-image: url('images/bg-lines@2x.png');*/
     }
 
-    .main-img-background {
-        background-image: url('images/icon-plus@2x.png');
-    }
+    /*.main-img-background {*/
+        /*background-image: url('images/icon-plus@2x.png');*/
+    /*}*/
 
     .main-text-wrapper,
     .prefooter-text-wrapper {
