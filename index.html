@@ -8,36 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="pinterest" content="nopin" />
     <title>Sample mockup - responsive page</title>
-    <!--<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Barlow|Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles_old.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 
-<body>
-<div class="body-background"></div>
+<body class="body-content">
 <main class="main-content-wrapper" role="main">
-    <section class="main-img-wrapper">
-        <figure>
+    <section class="main-content-img">
+        <div class="main-img-wrapper">
             <img src="images/content-image.jpg" alt="People sitting on a grass" nopin="nopin" />
-            <figcaption>THIS IS A SPACE FOR IMAGE CAPTIONS</figcaption>
-        </figure>
-        <!--<img class="article-img" src="images/content-image.jpg" alt="People sitting on a grass" nopin="nopin"/>-->
-        <!--<p></p>-->
-        <div class="main-img-background"></div>
-
-
-
+            <p class="main-img-caption">THIS IS A SPACE FOR IMAGE CAPTIONS</p>
+        </div>
     </section>
-    <section class="main-text-wrapper">
-        <div>
+    <section class="main-content-text">
+        <div class="main-text-wrapper">
             <h1 id="header">This is a sample<br><span>Title that has content</span></h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto cupiditate dolorum eveniet
-                exercitationem facilis fugiat illo maxime mollitia officiis quas qui repellendus, rerum saepe sequi
+                exercitationem mollitia officiis quas qui repellendus, rerum saepe sequi
                 sint, suscipit voluptas voluptates?<span>Aperiam consequuntur</span> deserunt. Illo illum itaque
                 mollitia nostrum perspiciatis sequi, similique purus.
             </p>
@@ -45,8 +36,6 @@
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 Learn More About This Content
             </a>
-
-
         </div>
     </section>
 </main>
@@ -106,7 +95,6 @@
         </div>
     </div>
     <div class="scroll-top">
-
         <div>
             <a href="#header" class="scroll-top-link">
                 <span class="arrow-left">
@@ -122,13 +110,11 @@
 <footer class="footer" role="contentinfo">
     <div class="footer-wrapper">
         <p>COPYRIGHT &#169; 2018 Company Name, LLC ALL RIGHTS RESERVED.</p>
-        <div>
-            <img src="images/dynamix-logo-white.png">
+        <div class="logo-wrapper">
+            <a class="logo-link" href="https://www.dynamixwebdesign.com" target="_blank"><strong>DynamiX Web Design</strong></a>
+            <!--<img src="images/dynamix-logo-white.png">-->
         </div>
     </div>
-
 </footer>
-
-
 </body>
 </html>
