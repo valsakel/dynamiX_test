@@ -1,3 +1,241 @@
-//body {
-//  background-color: grey;
+@base-color: #000000;
+@brand-color: #ff6620;
+@accent-color: #7cd0f6;
+@base-font-family: 'Barlow', sans-serif;
+@accent-font-family: 'Barlow Condensed', sans-serif;
+@secondary-font-family: 'Quicksand', sans-serif;
+@base-font-size: 16px;
+@secondary-font-size: 14px;
+@max-page-width: 1400px;
+
+.section {
+  max-width: @max-page-width;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2% 2% 10%;
+}
+
+.header {
+  font-family: @accent-font-family;
+  font-size: 26px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/* === RESETS === */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Chrome/Opera/Safari/Edge */
+::-webkit-input-placeholder { color: @base-color; }
+/* Firefox 19+ */
+::-moz-placeholder { color: @base-color; opacity: 1; }
+/* Firefox 18- */
+:-moz-placeholder { color: @base-color; opacity: 1; }
+/* IE 11 */
+//:-ms-input-placeholder { color: @black; }
+
+select, option {
+  /* Chrome/Opera/Safari/Edge/IE Mobile */
+  -webkit-appearance: none;
+  /* Firefox 61+ */
+  -moz-appearance: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+legend {
+  color: transparent;
+  line-height: 0;
+}
+
+input, select, textarea {
+  display: block;
+  font-family: inherit;
+  width: 100%;
+  padding: 2% 0;
+  opacity: 1;
+  border-bottom: 1px solid #000000;
+  resize: none;
+}
+
+// To remove button from IE11
+select::-ms-expand {
+  display: none;
+}
+
+i {
+  padding-right: 2%;
+}
+
+/* === MAIN === */
+.main-wrapper {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/bg-lines.png') no-repeat 100% 100%;
+    background-size: contain;
+  }
+}
+
+//.main-wrapper::before {
+//
 //}
+
+/* === HERO SECTION === */
+.hero-content-wrapper {
+  &:extend(.section);
+}
+
+.hero-img-section {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    //display: block;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    height: 80%;
+    z-index: -1;
+    background: url(images/icon-plus.png) space;
+    background-size: 18px 18px;
+  }
+  .hero-img-wrapper {
+    padding-bottom: 5%;
+    .hero-img {
+      max-width: 80%;
+    }
+    .hero-img-caption {
+      display: inline-block;
+      background-color: #fff;
+      font-size: 80%;
+      opacity: 0.6;
+      padding-top: 1%;
+    }
+  }
+}
+
+.hero-text-section {
+  padding-top: 5%;
+  .hero-title {
+    color: @accent-color;
+    &:extend(.header);
+    strong {
+      color: @brand-color;
+      text-transform: uppercase;
+    }
+  }
+  .hero-text {
+    padding: 5% 0;
+    font-family: @secondary-font-family;
+    span {
+      color: #7cd0f6;
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+  .hero-link {
+    font-family: @accent-font-family;
+    font-weight: 600;
+    text-decoration: none;
+    color: @brand-color;
+    font-size: @secondary-font-size;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* === PREFOOTER SECTION === */
+.prefooter {
+  &:extend(.section);
+  position: relative;
+}
+
+.prefooter-form-wrapper {
+  width: 100%;
+  padding-bottom: 5%;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    min-width: 300px;
+  }
+  .form-group-btn {
+    align-items: center;
+    .form-btn {
+      width: 50%;
+      font-size: 18px;
+      padding: 8px 5px;
+      color: #fff;
+      background-color: @brand-color;
+      border-radius: 0;
+      border: 1px solid @brand-color;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      touch-action: manipulation;
+      cursor: pointer;
+      user-select: none;
+    }
+    p {
+      //width: 100%;
+      font-family: @secondary-font-family;
+      //align-self: flex-end;
+      font-size: 12px;
+      padding-top: 2%;
+    }
+  }
+}
+
+.prefooter-text-wrapper {
+  width: 100%;
+  padding-top: 5%;
+  .prefooter-title {
+    &:extend(.header);
+    color: @brand-color;
+    strong {
+      text-transform: uppercase;
+    }
+  }
+  .company-details {
+    padding-top: 5%;
+    p {
+      font-size: @secondary-font-size;
+    }
+
+  }
+  .company-contacts {
+    p {
+      padding-top: 2%;
+      font-size: @secondary-font-size;
+    }
+  }
+}
+
+.
+
+
+
+
+
+

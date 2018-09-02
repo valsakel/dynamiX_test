@@ -15,106 +15,111 @@
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 
-<body class="body-content">
-<main class="main-content-wrapper" role="main">
-    <section class="main-content-img">
-        <div class="main-img-wrapper">
-            <img src="images/content-image.jpg" alt="People sitting on a grass" nopin="nopin" />
-            <p class="main-img-caption">THIS IS A SPACE FOR IMAGE CAPTIONS</p>
+<body>
+<main class="main-wrapper" role="main">
+    <section class="hero-content-wrapper">
+        <div class="hero-img-section">
+            <div class="hero-img-wrapper">
+                <img class="hero-img" src="images/content-image.jpg" alt="People sitting on a grass" nopin="nopin" />
+                <p class="hero-img-caption">THIS IS A SPACE FOR IMAGE CAPTIONS</p>
+            </div>
+        </div>
+        <div class="hero-text-section">
+            <div class="hero-text-wrapper">
+                <h1 id="header" class="hero-title">This is a sample<br><strong>Title that has content</strong></h1>
+                <p class="hero-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto cupiditate dolorum eveniet
+                    exercitationem mollitia officiis quas qui repellendus, rerum saepe sequi
+                    sint, suscipit voluptas voluptates?<span>Aperiam consequuntur</span> deserunt. Illo illum itaque
+                    mollitia nostrum perspiciatis sequi, similique purus.
+                </p>
+                <a href="https://www.dynamixwebdesign.com" target="_blank" class="hero-link">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    Learn More About This Content
+                </a>
+            </div>
         </div>
     </section>
-    <section class="main-content-text">
-        <div class="main-text-wrapper">
-            <h1 id="header">This is a sample<br><span>Title that has content</span></h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto cupiditate dolorum eveniet
-                exercitationem mollitia officiis quas qui repellendus, rerum saepe sequi
-                sint, suscipit voluptas voluptates?<span>Aperiam consequuntur</span> deserunt. Illo illum itaque
-                mollitia nostrum perspiciatis sequi, similique purus.
-            </p>
-            <a href="#" class="main-text-link">
-                <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                Learn More About This Content
-            </a>
+    <section class="prefooter">
+        <div class="prefooter-form-wrapper">
+            <form id="page-form">
+                <fieldset>
+                    <legend>Page form</legend>
+                    <div class="form-group">
+                        <label>
+                            <input type="text" placeholder="NAME *" required>
+                        </label>
+                        <label>
+                            <input type="tel" placeholder="PHONE *" required>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="email" placeholder="EMAIL *" required>
+                        </label>
+                        <label class="custom-caret">
+                            <select class="custom-caret">
+                                <option disabled selected># OF EMPLOYEES |</option>
+                                <option>0-49</option>
+                                <option>50-99</option>
+                                <option>Over 100</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="3" form="page-form" placeholder="COMMENTS"></textarea>
+                    </div>
+                    <div class="form-group form-group-btn">
+                        <button class="form-btn" type="submit">&#x2192;</button>
+                        <p>* indicates required field</p>
+                    </div>
+                </fieldset>
+            </form>
         </div>
-    </section>
-</main>
-<section class="prefooter">
-    <div class="prefooter-form-wrapper">
-        <form id="page-form">
-            <fieldset>
-                <legend>Page form</legend>
-                <div class="form-group">
-                    <label>
-                        <input type="text" placeholder="NAME *" required>
-                    </label>
-                    <label>
-                        <input type="email" placeholder="EMAIL *" required>
-                    </label>
-                </div>
-                <div class="form-group">
-                    <label>
-                        <input type="tel" placeholder="PHONE *" required>
-                    </label>
-                    <label class="custom-caret">
-                        <select class="custom-caret">
-                            <option disabled selected># OF EMPLOYEES |</option>
-                            <option>0-49</option>
-                            <option>50-99</option>
-                            <option>Over 100</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="form-group">
-                    <textarea rows="3" form="page-form" placeholder="COMMENTS"></textarea>
-                </div>
-                <div class="form-group">
-                    <button class="form-btn" type="submit">&#x2192;</button>
-                    <p>* indicates required field</p>
-                </div>
-            </fieldset>
-        </form>
-    </div>
-    <div class="prefooter-text-wrapper">
-        <h2>This is another<br>title<br><span>with bold</span></h2>
-        <div>
-            <p>COMPANY NAME, LLC</p>
-            <P>This is what company does.</P>
-            <p class="company-details">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                1122 Test Street, Atlanta GA, 30022
-            </p>
-            <p class="company-details">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                800.800.8000
-            </p>
-            <p class="company-details">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                aborem@dynamixwebdesign.com
-            </p>
+        <div class="prefooter-text-wrapper">
+            <h2 class="prefooter-title">This is another<br>title<br><strong>with bold</strong></h2>
+            <div class="company-details">
+                <p>COMPANY NAME, LLC</p>
+                <P>This is what company does.</P>
+            </div>
+            <div class="company-contacts">
+                <p>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    1122 Test Street, Atlanta GA, 30022
+                </p>
+                <p>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    800.800.8000
+                </p>
+                <p class="company-details">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    aborem@dynamixwebdesign.com
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="scroll-top">
-        <div>
-            <a href="#header" class="scroll-top-link">
+        <div class="prefooter-scroll-link">
+            <div>
+                <a href="#header" class="scroll-top-link">
                 <span class="arrow-left">
                     <span></span>
                     <span></span>
                     <span></span>
                 </span>
-                Go to top
-            </a>
+                    Go to top
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+</main>
 <footer class="footer" role="contentinfo">
-    <div class="footer-wrapper">
+    <section class="footer-wrapper">
         <p>COPYRIGHT &#169; 2018 Company Name, LLC ALL RIGHTS RESERVED.</p>
         <div class="logo-wrapper">
             <a class="logo-link" href="https://www.dynamixwebdesign.com" target="_blank"><strong>DynamiX Web Design</strong></a>
             <!--<img src="images/dynamix-logo-white.png">-->
         </div>
-    </div>
+    </section>
 </footer>
 </body>
 </html>
