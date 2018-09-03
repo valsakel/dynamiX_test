@@ -7,15 +7,27 @@
 @base-font-size: 16px;
 @secondary-font-size: 14px;
 @max-page-width: 1400px;
-
-
+@high-density: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+               ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+               ~"only screen and (-o-min-device-pixel-ratio: 1.5/1)",
+               ~"only screen and (min-device-pixel-ratio: 1.5)",
+               ~"only screen and (min-resolution: 144dpi)",
+               ~"only screen and (min-resolution: 1.5dppx)";
+@tablets: ~"only screen and (min-width: 760px)";
+@desktop: ~"only screen and (min-width: 992px)";
 
 .section {
   max-width: @max-page-width;
   display: flex;
-  flex-wrap: wrap;
+  display: -ms-flexbox;
+  //flex-wrap: wrap;
+  //-ms-flex-wrap: wrap;
+  flex-direction: column;
   margin: 0 auto;
   padding: 2% 2% 10%;
+  @media @tablets {
+    flex-direction: row;
+  }
 }
 
 .header {
@@ -48,7 +60,7 @@ html {
 /* Firefox 18- */
 :-moz-placeholder { color: @base-color; opacity: 1; }
 /* IE 11 */
-//:-ms-input-placeholder { color: @black; }
+:-ms-input-placeholder { color: @base-color; }
 
 select, option {
   /* Chrome/Opera/Safari/Edge/IE Mobile */
@@ -81,6 +93,10 @@ select::-ms-expand {
   display: none;
 }
 
+label {
+  width: 100%;
+}
+
 i {
   padding-right: 2%;
 }
@@ -96,19 +112,21 @@ i {
     background: url('images/bg-lines.png') no-repeat 100% 100%;
     background-size: contain;
     z-index: -1;
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @media @high-density {
       background-image: url('images/bg-lines@2x.png')
     }
+    @media @tablets {
+      background-size: 60%;
+    }
   }
-}
 
-//.main-wrapper::before {
-//
-//}
+}
 
 /* === HERO SECTION === */
 .hero-content-wrapper {
   &:extend(.section);
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
 }
 
 .hero-img-section {
@@ -124,8 +142,11 @@ i {
     z-index: -1;
     background: url(images/icon-plus.png) space;
     background-size: 18px 18px;
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @media @high-density {
       background-image: url('images/icon-plus@2x.png');
+    }
+    @media @tablets {
+      background-size: 23px;
     }
   }
   .hero-img-wrapper {
@@ -151,6 +172,9 @@ i {
     strong {
       color: @brand-color;
       text-transform: uppercase;
+    }
+    @media @tablets {
+      font-size: 30px;
     }
   }
   .hero-text {
@@ -183,10 +207,29 @@ i {
 .prefooter-form-wrapper {
   width: 100%;
   padding-bottom: 5%;
+  text-align: right;
+  form {
+    display: flex;
+    justify-content: center;
+    fieldset {
+      width: 65%;
+    }
+    @media @tablets {
+      justify-content: flex-end;
+    }
+
+  }
   .form-group {
     display: flex;
+    display: -ms-flexbox;
     flex-direction: column;
     min-width: 300px;
+    @media @desktop {
+      flex-direction: row;
+      label:nth-child(2) {
+        margin-left: 20px;
+      }
+    }
   }
   .form-group-btn {
     margin-top: 20px;
@@ -206,6 +249,11 @@ i {
       touch-action: manipulation;
       cursor: pointer;
       user-select: none;
+      @media @desktop {
+        width: 50px;
+        color: @brand-color;
+        background-color: transparent;
+      }
     }
     p {
       //width: 100%;
@@ -213,6 +261,10 @@ i {
       //align-self: flex-end;
       font-size: 12px;
       padding-top: 2%;
+      @media @desktop {
+        align-self: flex-end;
+        padding-left: 25px;
+      }
     }
   }
   .custom-caret {
@@ -242,6 +294,9 @@ i {
     strong {
       text-transform: uppercase;
     }
+    @media @tablets {
+      font-size: 30px;
+    }
   }
   .company-details {
     padding-top: 5%;
@@ -263,6 +318,9 @@ i {
   .scroll-top-link-wrapper {
     transform: rotate(90deg);
     transform-origin: right top 0;
+    @media @tablets {
+      transform-origin: 8% 50%;
+    }
   }
   .scroll-top-link {
     font-size: @secondary-font-size;
@@ -303,6 +361,12 @@ i {
       }
     }
   }
+  @media @tablets {
+    right: auto;
+    bottom: auto;
+    left: 0;
+    padding-left: 2%;
+  }
 }
 
 /* === FOOTER === */
@@ -312,6 +376,7 @@ i {
     max-width: @max-page-width;
     height: 8vh;
     display: flex;
+    display: -ms-flexbox;
     align-items: center;
     color: #ffffff;
     padding: 1.5em;
@@ -335,24 +400,53 @@ i {
     &:hover, &:focus {
       opacity: 0.5;
     }
-    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @media @high-density {
       background-image: url('images/dynamix-logo-white@2x.png');
     }
   }
 }
 
+
+@media @tablets {
+  .hero-content-wrapper,
+  .prefooter {
+    padding: 0 2% 50px;
+  }
+  .hero-img-section,
+  .prefooter-form-wrapper {
+    flex: 0 0 50%;
+  }
+
+  .hero-text-section,
+  .prefooter-text-wrapper {
+    flex-grow: 1;
+  }
+
+  .hero-text-section,
+  .prefooter-text-wrapper {
+    padding-left: 3em;
+  }
+
+  .prefooter-text-wrapper {
+    padding-top: 0;
+  }
+}
+
+// Firefox does not evenly distribute space between images
+// when using background-repeat: space.
 @supports (-moz-appearance:none) {
   .hero-img-section {
     &::before {
-      background: url('images/icon-plus.png') round;
-      background-size: 18px 18px;
-      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-        background-image: url('images/icon-plus@2x.png');
-      }
+      background-repeat: round;
     }
   }
 }
 
+@supports (-ms-flex-wrap: wrap){
+  .main-wrapper .hero-content-wrapper {
+    -ms-flex-wrap: nowrap;
 
+  }
+}
 
 

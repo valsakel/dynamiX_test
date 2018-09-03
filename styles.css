@@ -3,9 +3,17 @@
 .prefooter {
   max-width: 1400px;
   display: flex;
-  flex-wrap: wrap;
+  display: -ms-flexbox;
+  flex-direction: column;
   margin: 0 auto;
   padding: 2% 2% 10%;
+}
+@media only screen and (min-width: 760px) {
+  .section,
+  .hero-content-wrapper,
+  .prefooter {
+    flex-direction: row;
+  }
 }
 .header,
 .hero-text-section .hero-title,
@@ -45,6 +53,9 @@ html {
   opacity: 1;
 }
 /* IE 11 */
+:-ms-input-placeholder {
+  color: #000000;
+}
 select,
 option {
   /* Chrome/Opera/Safari/Edge/IE Mobile */
@@ -73,6 +84,9 @@ textarea {
 select::-ms-expand {
   display: none;
 }
+label {
+  width: 100%;
+}
 i {
   padding-right: 2%;
 }
@@ -89,12 +103,21 @@ i {
   background-size: contain;
   z-index: -1;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5/1), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
   .main-wrapper::before {
     background-image: url('images/bg-lines@2x.png');
   }
 }
+@media only screen and (min-width: 760px) {
+  .main-wrapper::before {
+    background-size: 60%;
+  }
+}
 /* === HERO SECTION === */
+.hero-content-wrapper {
+  -ms-flex: 1 0 100%;
+  flex: 1 0 100%;
+}
 .hero-img-section {
   position: relative;
 }
@@ -109,9 +132,14 @@ i {
   background: url(images/icon-plus.png) space;
   background-size: 18px 18px;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5/1), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
   .hero-img-section:before {
     background-image: url('images/icon-plus@2x.png');
+  }
+}
+@media only screen and (min-width: 760px) {
+  .hero-img-section:before {
+    background-size: 23px;
   }
 }
 .hero-img-section .hero-img-wrapper {
@@ -136,6 +164,11 @@ i {
 .hero-text-section .hero-title strong {
   color: #ff6620;
   text-transform: uppercase;
+}
+@media only screen and (min-width: 760px) {
+  .hero-text-section .hero-title {
+    font-size: 30px;
+  }
 }
 .hero-text-section .hero-text {
   padding: 5% 0;
@@ -164,11 +197,33 @@ i {
 .prefooter-form-wrapper {
   width: 100%;
   padding-bottom: 5%;
+  text-align: right;
+}
+.prefooter-form-wrapper form {
+  display: flex;
+  justify-content: center;
+}
+.prefooter-form-wrapper form fieldset {
+  width: 65%;
+}
+@media only screen and (min-width: 760px) {
+  .prefooter-form-wrapper form {
+    justify-content: flex-end;
+  }
 }
 .prefooter-form-wrapper .form-group {
   display: flex;
+  display: -ms-flexbox;
   flex-direction: column;
   min-width: 300px;
+}
+@media only screen and (min-width: 992px) {
+  .prefooter-form-wrapper .form-group {
+    flex-direction: row;
+  }
+  .prefooter-form-wrapper .form-group label:nth-child(2) {
+    margin-left: 20px;
+  }
 }
 .prefooter-form-wrapper .form-group-btn {
   margin-top: 20px;
@@ -189,10 +244,23 @@ i {
   cursor: pointer;
   user-select: none;
 }
+@media only screen and (min-width: 992px) {
+  .prefooter-form-wrapper .form-group-btn .form-btn {
+    width: 50px;
+    color: #ff6620;
+    background-color: transparent;
+  }
+}
 .prefooter-form-wrapper .form-group-btn p {
   font-family: 'Quicksand', sans-serif;
   font-size: 12px;
   padding-top: 2%;
+}
+@media only screen and (min-width: 992px) {
+  .prefooter-form-wrapper .form-group-btn p {
+    align-self: flex-end;
+    padding-left: 25px;
+  }
 }
 .prefooter-form-wrapper .custom-caret {
   position: relative;
@@ -220,6 +288,11 @@ i {
 .prefooter-text-wrapper .prefooter-title strong {
   text-transform: uppercase;
 }
+@media only screen and (min-width: 760px) {
+  .prefooter-text-wrapper .prefooter-title {
+    font-size: 30px;
+  }
+}
 .prefooter-text-wrapper .company-details {
   padding-top: 5%;
   font-size: 14px;
@@ -239,6 +312,11 @@ i {
 .prefooter-scroll-link .scroll-top-link-wrapper {
   transform: rotate(90deg);
   transform-origin: right top 0;
+}
+@media only screen and (min-width: 760px) {
+  .prefooter-scroll-link .scroll-top-link-wrapper {
+    transform-origin: 8% 50%;
+  }
 }
 .prefooter-scroll-link .scroll-top-link {
   font-size: 14px;
@@ -280,6 +358,14 @@ i {
   left: 0;
   transform-origin: top left;
 }
+@media only screen and (min-width: 760px) {
+  .prefooter-scroll-link {
+    right: auto;
+    bottom: auto;
+    left: 0;
+    padding-left: 2%;
+  }
+}
 /* === FOOTER === */
 .footer {
   background-color: #ff6620;
@@ -288,6 +374,7 @@ i {
   max-width: 1400px;
   height: 8vh;
   display: flex;
+  display: -ms-flexbox;
   align-items: center;
   color: #ffffff;
   padding: 1.5em;
@@ -313,20 +400,40 @@ i {
 .footer .logo-link:focus {
   opacity: 0.5;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5/1), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
   .footer .logo-link {
     background-image: url('images/dynamix-logo-white@2x.png');
   }
 }
+@media only screen and (min-width: 760px) {
+  .hero-content-wrapper,
+  .prefooter {
+    padding: 0 2% 50px;
+  }
+  .hero-img-section,
+  .prefooter-form-wrapper {
+    flex: 0 0 50%;
+  }
+  .hero-text-section,
+  .prefooter-text-wrapper {
+    flex-grow: 1;
+  }
+  .hero-text-section,
+  .prefooter-text-wrapper {
+    padding-left: 3em;
+  }
+  .prefooter-text-wrapper {
+    padding-top: 0;
+  }
+}
 @supports (-moz-appearance:none) {
   .hero-img-section::before {
-    background: url('images/icon-plus.png') round;
-    background-size: 18px 18px;
+    background-repeat: round;
   }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    .hero-img-section::before {
-      background-image: url('images/icon-plus@2x.png');
-    }
+}
+@supports (-ms-flex-wrap: wrap) {
+  .main-wrapper .hero-content-wrapper {
+    -ms-flex-wrap: nowrap;
   }
 }
 /*# sourceMappingURL=styles.css.map */
