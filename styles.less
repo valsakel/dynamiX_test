@@ -8,6 +8,8 @@
 @secondary-font-size: 14px;
 @max-page-width: 1400px;
 
+
+
 .section {
   max-width: @max-page-width;
   display: flex;
@@ -93,6 +95,10 @@ i {
     height: 100%;
     background: url('images/bg-lines.png') no-repeat 100% 100%;
     background-size: contain;
+    z-index: -1;
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      background-image: url('images/bg-lines@2x.png')
+    }
   }
 }
 
@@ -118,6 +124,9 @@ i {
     z-index: -1;
     background: url(images/icon-plus.png) space;
     background-size: 18px 18px;
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      background-image: url('images/icon-plus@2x.png');
+    }
   }
   .hero-img-wrapper {
     padding-bottom: 5%;
@@ -177,10 +186,11 @@ i {
   .form-group {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
     min-width: 300px;
   }
   .form-group-btn {
+    margin-top: 20px;
+
     align-items: center;
     .form-btn {
       width: 50%;
@@ -205,6 +215,22 @@ i {
       padding-top: 2%;
     }
   }
+  .custom-caret {
+    position: relative;
+  }
+  .custom-caret::after {
+    content: "\f107";
+    font-family: 'FontAwesome', sans-serif;
+    font-weight: bold;
+    padding: 2%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  label {
+    margin-top: 20px;
+  }
 }
 
 .prefooter-text-wrapper {
@@ -219,22 +245,113 @@ i {
   }
   .company-details {
     padding-top: 5%;
-    p {
-      font-size: @secondary-font-size;
-    }
-
+    font-size: @secondary-font-size;
   }
   .company-contacts {
+    font-size: @secondary-font-size;
     p {
       padding-top: 2%;
-      font-size: @secondary-font-size;
     }
   }
 }
 
-.
+.prefooter-scroll-link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 1.5em;
+  .scroll-top-link-wrapper {
+    transform: rotate(90deg);
+    transform-origin: right top 0;
+  }
+  .scroll-top-link {
+    font-size: @secondary-font-size;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    &:hover, &:focus {
+      color: @brand-color;
+    }
+  }
+  .arrow-left {
+    width: 50px;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    span {
+      position: absolute;
+      height: 1px;
+      background-color: #000000;
+      &:first-child {
+        width: 50px;
+        top: 70%;
+      }
+      &:nth-child(2) {
+        width: 10px;
+        top: 70%;
+        transform: rotate(-45deg);
+        left: 0;
+        transform-origin: bottom left;
+      }
+      &:nth-child(3) {
+        width: 10px;
+        top: 70%;
+        transform: rotate(45deg);
+        left: 0;
+        transform-origin: top left;
+      }
+    }
+  }
+}
 
+/* === FOOTER === */
+.footer {
+  background-color: @brand-color;
+  .footer-wrapper {
+    max-width: @max-page-width;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding: 1.5em;
+    justify-content: space-between;
+    font-size: 12px;
+    p {
+      opacity: 0.7;
+    }
+  }
+  .logo-wrapper {
+    font-size: 0;
+    flex: 0 0 97px;
+    padding-left: 5%;
+  }
+  .logo-link {
+    display: inline-block;
+    background: url('images/dynamix-logo-white.png') no-repeat;
+    background-size: contain;
+    width: 97px;
+    height: 24px;
+    &:hover, &:focus {
+      opacity: 0.5;
+    }
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      background-image: url('images/dynamix-logo-white@2x.png');
+    }
+  }
+}
 
+@supports (-moz-appearance:none) {
+  .hero-img-section {
+    &::before {
+      background: url('images/icon-plus.png') round;
+      background-size: 18px 18px;
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        background-image: url('images/icon-plus@2x.png');
+      }
+    }
+  }
+}
 
 
 

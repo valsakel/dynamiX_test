@@ -73,8 +73,8 @@ fieldset, legend {
 }
 
 legend {
-    color: transparent;
-    line-height: 0;
+    /*color: transparent;*/
+    /*line-height: 0;*/
 }
 
 input, select, textarea {
@@ -90,7 +90,7 @@ input, select, textarea {
 }
 
 label:nth-child(2) {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 
@@ -125,14 +125,14 @@ i {
 
 .main-content-text,
 .prefooter-text-wrapper {
-    padding-top: 5%;
+    /*padding-top: 5%;*/
 }
 
 /* === MAIN SECTION === */
 
 .main-content-img {
-    position: relative;
-    justify-content: flex-start;
+    /*position: relative;*/
+    /*justify-content: flex-start;*/
 
 
 }
@@ -228,7 +228,7 @@ i {
 }
 
 .prefooter-text-wrapper div {
-    padding-top: 5%;
+    /*padding-top: 5%;*/
 }
 
 .prefooter-text-wrapper p {
@@ -237,7 +237,7 @@ i {
 }
 
 .prefooter-form-wrapper {
-    padding-bottom: 10%;
+    /*padding-bottom: 10%;*/
 }
 
 .form-group {
@@ -256,22 +256,22 @@ select, option {
 }
 
 .custom-caret {
-    position: relative;
+    /*position: relative;*/
 }
 
 .custom-caret::after {
-    content: "\f107";
-    font-family: 'FontAwesome', sans-serif;
-    font-weight: 700;
+    /*content: "\f107";*/
+    /*font-family: 'FontAwesome', sans-serif;*/
+    /*font-weight: 700;*/
     /*color: #484848;*/
-    padding-top: 2%;
-    right: 0;
-    top: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: 0;
-    width: 40px;
-    text-align: center;
+    /*padding-top: 2%;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*position: absolute;*/
+    /*pointer-events: none;*/
+    /*z-index: 0;*/
+    /*width: 40px;*/
+    /*text-align: center;*/
 }
 
 .form-group {
@@ -320,150 +320,147 @@ select, option {
 }
 
 .footer {
-    background-color: #ff6620;
-    /*margin: 0 auto;*/
-    display: flex;
-    justify-content: center;
+    /*background-color: #ff6620;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
 }
 
 .footer-wrapper {
-    width: 100%;
-    max-width: 1400px;
-    height: 8vh;
-    display: flex;
-    color: #eecec0;
-    padding: 1.5em;
-    justify-content: space-between;
+    /*width: 100%;*/
+    /*max-width: 1400px;*/
+    /*height: 8vh;*/
+    /*display: flex;*/
+    /*color: #eecec0;*/
+    /*padding: 1.5em;*/
+    /*justify-content: space-between;*/
 }
 
 .footer-wrapper * {
-    align-self: center;
+    /*align-self: center;*/
 }
 
 .footer-wrapper p {
-    font-size: 12px;
-    width: 60%;
+    /*font-size: 12px;*/
+    /*width: 60%;*/
 }
 
 .footer-wrapper div {
-    display: flex;
+    /*display: flex;*/
 }
 
 
 .logo-wrapper {
-    font-size: 0;
+    /*font-size: 0;*/
 }
 
 .logo-link {
-    display: inline-block;
-    background: url('images/dynamix-logo-white.png') no-repeat;
-    background-size: contain;
-    width: 97px;
-    height: 24px;
+    /*display: inline-block;*/
+    /*background: url('images/dynamix-logo-white.png') no-repeat;*/
+    /*background-size: contain;*/
+    /*width: 97px;*/
+    /*height: 24px;*/
 }
 
 .logo-link:hover,
 .logo-link:focus {
-    opacity: 0.5;
+    /*opacity: 0.5;*/
 }
 
 /* === Scroll Top Link === */
 
 .scroll-top {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-right: 1.5em;
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*margin-right: 1.5em;*/
 }
 
 .scroll-top div {
-    transform: rotate(90deg);
-    transform-origin: right top 0;
+    /*transform: rotate(90deg);*/
+    /*transform-origin: right top 0;*/
 }
 
 .scroll-top-link {
-    font-family: 'Barlow', sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
+    /*font-family: 'Barlow', sans-serif;*/
+    /*font-size: 14px;*/
+    /*text-transform: uppercase;*/
+    /*text-decoration: none;*/
+    /*color: inherit;*/
 }
 
 .scroll-top-link:hover,
 .scroll-top-link:focus {
-    color: #ff6620;
+    /*color: #ff6620;*/
 }
 
 .arrow-left {
-    width: 50px;
-    height: 16px;
-    display: inline-block;
-    position: relative;
-    margin-right: 8px;
+    /*width: 50px;*/
+    /*height: 16px;*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*margin-right: 8px;*/
 }
 
 .arrow-left span {
-    position: absolute;
-    height: 1px;
-    background-color: #000000;
+    /*position: absolute;*/
+    /*height: 1px;*/
+    /*background-color: #000000;*/
 }
 
 .arrow-left span:first-child {
-    width: 50px;
-    top: 70%;
+    /*width: 50px;*/
+    /*top: 70%;*/
 }
 
 .arrow-left span:nth-child(2) {
-    width: 10px;
-    top: 70%;
+    /*width: 10px;*/
+    /*top: 70%;*/
     /*-webkit-transform: rotate(-45deg);*/
-    transform: rotate(-45deg);
-    left: 0;
+    /*transform: rotate(-45deg);*/
+    /*left: 0;*/
     /*-webkit-transform-origin: bottom left;*/
-    transform-origin: bottom left;
+    /*transform-origin: bottom left;*/
 }
 
 .arrow-left span:nth-child(3) {
-    width: 10px;
-    top: 70%;
+    /*width: 10px;*/
+    /*top: 70%;*/
     /*-webkit-transform: rotate(45deg);*/
-    transform: rotate(45deg);
-    left: 0;
+    /*transform: rotate(45deg);*/
+    /*left: 0;*/
     /*-webkit-transform-origin: top left;*/
-    transform-origin: top left;
+    /*transform-origin: top left;*/
 }
 
 
 
 @supports (-moz-appearance:none) {
-
-    .main-content-img::before {
-        background: url('images/icon-plus.png') 18px/18px round;
-    }
+    /*.main-content-img::before {*/
+        /*background: url('images/icon-plus.png') 18px/18px round;*/
+    /*}*/
 }
 
 
 /* 1.5 dpr */
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     /* Retina-specific stuff here */
-    .logo-link {
-        background-image: url('images/dynamix-logo-white@2x.png');
-    }
+    /*.logo-link {*/
+        /*background-image: url('images/dynamix-logo-white@2x.png');*/
+    /*}*/
 
-    .main-content-img::before {
-        background-image: url('images/icon-plus@2x.png');
-    }
+    /*.main-content-img::before {*/
+        /*background-image: url('images/icon-plus@2x.png');*/
+    /*}*/
 
-    @supports (-moz-appearance:none) {
-        .main-content-img::before {
-            background: url('images/icon-plus@2.png') 23px/23px round;
-        }
-    }
+    /*@supports (-moz-appearance:none) {*/
+        /*.main-content-img::before {*/
+            /*background: url('images/icon-plus@2x.png') 46px/46px round;*/
+        /*}*/
+    /*}*/
 
-
-    .body-content::before {
-        background-image: url('images/bg-lines@2x.png')
-    }
+    /*.body-content::before {*/
+        /*background-image: url('images/bg-lines@2x.png')*/
+    /*}*/
 }
 
 
