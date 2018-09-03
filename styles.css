@@ -431,9 +431,4 @@ i {
     background-repeat: round;
   }
 }
-@supports (-ms-flex-wrap: wrap) {
-  .main-wrapper .hero-content-wrapper {
-    -ms-flex-wrap: nowrap;
-  }
-}
 /*# sourceMappingURL=styles.css.map */
