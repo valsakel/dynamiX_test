@@ -208,7 +208,9 @@ i {
     display: flex;
     justify-content: center;
     fieldset {
-      width: 65%;
+      @media @desktop {
+        width: 65%;
+      }
     }
     @media @tablets {
       justify-content: flex-end;
