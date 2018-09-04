@@ -368,6 +368,8 @@ i {
 }
 /* === FOOTER === */
 .footer {
+  display: flex;
+  justify-content: center;
   background-color: #ff6620;
 }
 .footer .footer-wrapper {
@@ -377,8 +379,9 @@ i {
   display: -ms-flexbox;
   align-items: center;
   color: #ffffff;
-  padding: 1.5em;
+  padding: 2%;
   justify-content: space-between;
+  flex: 1 0 100%;
   font-size: 12px;
 }
 .footer .footer-wrapper p {

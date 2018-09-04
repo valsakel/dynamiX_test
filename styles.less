@@ -20,8 +20,6 @@
   max-width: @max-page-width;
   display: flex;
   display: -ms-flexbox;
-  //flex-wrap: wrap;
-  //-ms-flex-wrap: wrap;
   flex-direction: column;
   margin: 0 auto;
   padding: 2% 2% 10%;
@@ -43,7 +41,6 @@ html {
   scroll-behavior: smooth;
   font-family: @base-font-family;
   font-size: @base-font-size;
-
 }
 
 *, *:before, *:after {
@@ -134,7 +131,6 @@ i {
   &:before {
     content: '';
     position: absolute;
-    //display: block;
     bottom: 0;
     right: 0;
     width: 55%;
@@ -217,7 +213,6 @@ i {
     @media @tablets {
       justify-content: flex-end;
     }
-
   }
   .form-group {
     display: flex;
@@ -233,7 +228,6 @@ i {
   }
   .form-group-btn {
     margin-top: 20px;
-
     align-items: center;
     .form-btn {
       width: 50%;
@@ -256,9 +250,7 @@ i {
       }
     }
     p {
-      //width: 100%;
       font-family: @secondary-font-family;
-      //align-self: flex-end;
       font-size: 12px;
       padding-top: 2%;
       @media @desktop {
@@ -371,6 +363,8 @@ i {
 
 /* === FOOTER === */
 .footer {
+  display: flex;
+  justify-content: center;
   background-color: @brand-color;
   .footer-wrapper {
     max-width: @max-page-width;
@@ -379,8 +373,9 @@ i {
     display: -ms-flexbox;
     align-items: center;
     color: #ffffff;
-    padding: 1.5em;
+    padding: 2%;
     justify-content: space-between;
+    flex: 1 0 100%;
     font-size: 12px;
     p {
       opacity: 0.7;
